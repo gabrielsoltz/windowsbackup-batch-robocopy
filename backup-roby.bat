@@ -26,7 +26,7 @@ SET SOURCE[2]=G
 
 for /l %%n in (0,1,2) do (
     echo ------ INICIO BACKUP: !SOURCEPATH!\!SOURCE[%%n]! TO !DESTINATION!\!SOURCE[%%n]! >> !LOG!
-    robocopy !SOURCEPATH!\!SOURCE[%%n]! !DESTINATION!\!SOURCE[%%n]! /COPYALL /XA:SH /E /R:2 /W:30 /XD "$RECYCLE.BIN" "System Volume Information" "RECYCLER" >> !LOG!
+        robocopy "!SOURCEPATH!\!SOURCE[%%n]!" "!DESTINATION!\!SOURCE[%%n]!" /COPYALL /XA:SH /E /R:2 /W:30 /XD "$RECYCLE.BIN" "System Volume Information" "RECYCLER" >> !LOG!
 
     REM CONTROL DE ERRORES
     if %ERRORLEVEL% EQU 16 echo ***FATAL ERROR*** >> !LOG!
