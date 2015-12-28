@@ -54,7 +54,7 @@ set ENDDATE=%MyDate:~0,4%%MyDate:~6,2%%MyDate:~4,2%
 SET ENDTIME=%TIME%
 
 REM LOGGING
-echo ------------------------------------------------------- > !LOG!
+echo ------------------------------------------------------- >> !LOG!
 echo FIN DEL PROCESO DE BACKUP ----------------------- >> !LOG!
 echo FECHA: !ENDDATE! !ENDTIME! >> !LOG!
 echo ------------------------------------------------------- >> !LOG!
